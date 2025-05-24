@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/itHome"
+        android:title="Home"
+        android:icon="@drawable/food_home"
+        />
+    <item
+        android:id="@+id/itOrder"
+        android:title="Order"
+        android:icon="@drawable/icons8_notepad_50"
+        />
+    <item
+        android:id="@+id/itCart"
+        android:title="Giỏ hàng"
+        android:icon="@drawable/cart"
+        />
+<!--    <item-->
+<!--        android:id="@+id/itFavorite"-->
+<!--        android:title="Yêu Thích"-->
+<!--        android:icon="@drawable/icons8_favorite_48"-->
+<!--        />-->
+    <item
+        android:id="@+id/itProfile"
+        android:title="Tôi"
+        android:icon="@drawable/user"
+        />
+
+</menu>

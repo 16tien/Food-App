@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="food"
+            type="com.example.foodappdacs.model.Food" />
+
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".view.FoodDetail"
+            android:layout_weight="1"
+            tools:ignore="ExtraText">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:elevation="4dp"
+                    android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                    />
+                <ImageView
+                    android:id="@+id/imageFood"
+                    android:layout_marginTop="-56dp"
+                    android:layout_width="match_parent"
+                    android:scaleType="centerCrop"
+                    android:paddingTop="50dp"
+                    android:paddingBottom="0dp"
+                    android:layout_height="200dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@{food.foodName}"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="20dp"
+                    android:paddingStart="15dp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@{food.price}"
+                    android:textSize="24sp"
+                    android:textStyle="italic"
+                    android:textColor="@color/red"
+                    android:layout_marginTop="20dp"
+                    android:paddingStart="15dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mô tả"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="20dp"
+                    android:text="@{food.foodDesc}"
+                    android:textColor="@color/black" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ĐÁNH GIÁ"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    />
+            </LinearLayout>
+        </ScrollView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:orientation="horizontal"
+            android:layout_marginBottom="-5dp"
+            android:gravity="bottom">
+
+            <Button
+                android:id="@+id/btnAddCart"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:backgroundTint="#B1B1B1"
+                android:textColor="@color/main"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_height="match_parent"
+                android:layout_marginRight="-5dp"
+                android:text="Thêm Giỏ Hàng">
+            </Button>
+
+            <Button
+                android:id="@+id/btnBuy"
+                android:layout_width="0dp"
+                android:textSize="15sp"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/main"
+                android:textStyle="bold"
+                android:layout_height="match_parent"
+                android:text="Mua" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</layout>

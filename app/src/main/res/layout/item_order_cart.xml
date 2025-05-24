@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/img_food"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/comsuon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_name" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="16dp"
+        android:gravity="top"
+        android:lineSpacingExtra="4sp"
+        android:text="Com sươn"
+        android:textColor="#27272A"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:translationY="-2.03sp"
+        app:layout_constraintStart_toEndOf="@+id/img_food"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/qty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:text="Số lượng: "
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/img_food"
+        app:layout_constraintTop_toBottomOf="@+id/tv_name" />
+
+    <TextView
+        android:id="@+id/tv_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="2dp"
+        android:gravity="top"
+        android:lineSpacingExtra="4sp"
+        android:text="Giá: "
+        android:textColor="#27272A"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:translationY="-2.03sp"
+        app:layout_constraintStart_toEndOf="@+id/img_food"
+        app:layout_constraintTop_toBottomOf="@+id/qty" />
+</androidx.constraintlayout.widget.ConstraintLayout>
