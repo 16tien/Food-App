@@ -35,7 +35,6 @@ class OrderDetailActivity : AppCompatActivity() {
         }
         val bundle = intent.extras
         var orderId = bundle?.getInt("orderId")
-        var a =1+1
         loadOrderDetail(orderId)
     }
 
@@ -44,14 +43,16 @@ class OrderDetailActivity : AppCompatActivity() {
         CoroutineScope(Dispatchers.IO).launch {
             var qtys:List<Int> = orderApi.getQty(orderId!!)
             var orderDetails:List<Food> = orderApi.getOrderDetails(orderId!!)
-            var total = 0;
-
             adapter = OrderDetailAdapter(orderDetails, qtys)
             runOnUiThread {
                 binding.recyclerView.adapter = adapter
             }
 
         }
+    }
+    override fun onSupportNavigateUp(): Boolean {
+        finish()
+        return true
     }
 
 }

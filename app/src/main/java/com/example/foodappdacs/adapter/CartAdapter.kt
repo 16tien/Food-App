@@ -30,7 +30,7 @@ class CartAdapter(
             }
 
             binding.btnReduce.setOnClickListener {
-                if (quantity > 1) {
+                if (quantity > 0) {
                     val newQty = quantity - 1
                     listener.onQuantityChanged(position, newQty)
                 }
@@ -48,6 +48,13 @@ class CartAdapter(
     }
 
     override fun getItemCount() = foods.size
+
+    fun updateData(newFoods: List<Food>, newQty: List<Int>, newCart: List<Cart>) {
+        foods = newFoods
+        qty = newQty
+        cart = newCart
+        notifyDataSetChanged()
+    }
 }
 
 

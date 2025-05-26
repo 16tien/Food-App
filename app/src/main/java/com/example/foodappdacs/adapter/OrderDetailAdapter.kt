@@ -3,8 +3,10 @@ package com.example.foodappdacs.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.foodappdacs.api.UrlImage
 import com.example.foodappdacs.databinding.ItemDetailOrderBinding
 import com.example.foodappdacs.model.Food
+import com.squareup.picasso.Picasso
 
 class OrderDetailAdapter(private var foods: List<Food>, private var qtys: List<Int>):
     RecyclerView.Adapter<OrderDetailAdapter.OrderDetailViewHolder>() {
@@ -18,7 +20,7 @@ class OrderDetailAdapter(private var foods: List<Food>, private var qtys: List<I
         var tvName =binding.tvName
         var tvPrice = binding.tvPrice
         var tvQty = binding.tvQty
-
+        var image = binding.imageView
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): OrderDetailAdapter.OrderDetailViewHolder {
@@ -32,6 +34,8 @@ class OrderDetailAdapter(private var foods: List<Food>, private var qtys: List<I
         holder.tvName.text = order.foodName
         holder.tvQty.text = "Số lượng: ${qty.toString()}"
         holder.tvPrice.text = order.getPrice()
+        Picasso.get().load(UrlImage.urlImage + order.foodImage).into(holder.image)
+
     }
 
     override fun getItemCount()= foods.size
