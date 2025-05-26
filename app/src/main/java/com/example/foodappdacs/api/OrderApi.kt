@@ -2,8 +2,6 @@ package com.example.foodappdacs.api
 
 import com.example.foodappdacs.model.Food
 import com.example.foodappdacs.model.Order
-import com.example.foodappdacs.model.OrderDetail
-import com.google.gson.annotations.SerializedName
 import retrofit2.Call
 import retrofit2.http.*
 
@@ -27,13 +25,10 @@ interface OrderApi {
     @GET("getQtyDetails/{order_id}")
     suspend fun getQty(@Path("order_id") orderId: Int) : List<Int>
 
-    @GET("orderCart/{user_id}")
-    suspend fun createOrderCart(@Path("user_id") user_id: Int) : Call<ApiResponse>
-
     @FormUrlEncoded
     @POST("orderCart")
     fun createOrderCart(
-        @Field("user_id") user_id: Int,
+        @Field("user_id") userId: Int,
         @Field("total") total: Int,
     ) : Call<ApiResponse>
 }

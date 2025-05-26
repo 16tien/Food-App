@@ -15,4 +15,10 @@ data class LoginResponse(
     val tokenType: String,
     val expiresIn: Int
 )
+data class RegisterRequest(
+    val name: String,
+    val phone: String,
+    val email: String,
+    val password: String
+)
 

@@ -13,6 +13,4 @@ interface FoodApi {
     @GET("food/{foodId}")
     suspend fun getFoodById(@Path("foodId")id:Int) : Food
 
-    @GET("foods-by-ids")
-    suspend fun getFoodsByIds(@Query("ids") ids: List<Int>): List<Food>
 }

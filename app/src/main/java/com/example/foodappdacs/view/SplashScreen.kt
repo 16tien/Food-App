@@ -19,7 +19,7 @@ class SplashScreen : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash_screen)
         PrefManager.init(applicationContext)
-        PrefManager.clearAll()
+//        PrefManager.clearAll()
         lifecycleScope.launch {
             delay(SPLASH_TIME)
             val isLoggedIn = PrefManager.getLoginStatus()

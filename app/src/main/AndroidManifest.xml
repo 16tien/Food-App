@@ -16,6 +16,9 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".view.RegisterActivity"
+            android:exported="false" />
+        <activity
             android:name=".view.OrderDetailActivity"
             android:exported="false" />
         <activity
@@ -30,14 +33,16 @@
         <activity
             android:name=".view.MainActivity"
             android:exported="false" />
-        <activity android:name=".view.LoginActivity"
-            android:exported="false"/>
+        <activity
+            android:name=".view.LoginActivity"
+            android:exported="false" />
         <activity
             android:name=".view.SplashScreen"
             android:exported="true"
             android:windowSoftInputMode="adjustPan">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

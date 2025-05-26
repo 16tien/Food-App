@@ -68,8 +68,9 @@ class LoginActivity: AppCompatActivity() {
             })
         }
         tvRegister.setOnClickListener {
-            Toast.makeText(this, "Đi đến trang đăng ký", Toast.LENGTH_SHORT).show()
-            // startActivity(Intent(this, RegisterActivity::class.java))
+            intent = Intent(this, RegisterActivity::class.java)
+            startActivity(intent)
+            finish()
         }
     }
 }
